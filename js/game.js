@@ -57,12 +57,16 @@ class Game{
                        
                      if(index === player.index){
                          
-                       //add code to display the player's name on the respective basket.
-                        text(allPlayers[plr].name, x-25,y+25);
+                        fill("black");
+                        textSize(25);
+                        text(allPlayers[plr].name ,x-25,y+25);
+
                          
                      }
                     
-                      
+                     //texto para exibir a pontuação do jogador.
+
+                     
                  
                  }
                 
@@ -99,16 +103,14 @@ class Game{
                  }
                  
                   if (player.index !== null) {
-                    for (var i = 0; i < fruitGroup.length; i++) {
-                        if (fruitGroup.get(i).isTouching(players)) {
-                            fruitGroup.get(i).destroy();
-                         
-                            
-                        }
-                        
-                    }
+                     //preencha o código aqui, para destruir os objetos. (Use aquele do projeto de classe 40)
+                     //adicione a condição para calcular a pontuação. 
+                     //e use update() para atualizar os valores no banco de dados.
+
+                     player.score =player.score+1;
                   }
                 
+                  
 
          
          
