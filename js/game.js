@@ -63,7 +63,7 @@ class Game {
             }
 
             //texto para exibir a pontuação do jogador.
-            text("Player 1:" + allPlayers.player1.score, 50, 50)
+            text("Player 1:" + player.score, 100, 50)
 
         }
 
@@ -101,8 +101,10 @@ class Game {
 
         if (player.index !== null) {
             for (var i = 0; i < fruitGroup.length; i++) {
-                if (fruitGroup.get(i).isTouching(players)) {
-                    fruitGroup.get(i).destroy();
+                if (fruitGroup.get(i).isTouching(players)) 
+                { fruitGroup.get(i).destroy();
+                    player.score = player.score+1;
+                    player.update
 
 
                 }
@@ -111,7 +113,7 @@ class Game {
             //adicione a condição para calcular a pontuação. 
             //e use update() para atualizar os valores no banco de dados.
 
-            player.score = player.score + 1;
+            
         }
 
 
